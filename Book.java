@@ -19,9 +19,15 @@ public class Book {
    */
   public Vector  myLoan;
 
-  public String getTitle() {
-  return null;
-  }
+  public String getBookNameById(int bookId) {
+        for (Book book : books) {
+            if (book.getId() == bookId) {
+                return book.getName();
+            }
+        }
+        return "Book not found";
+    }
+}
 
   public String getIsbn() {
   return null;
